@@ -92,24 +92,6 @@ if (isset($_GET["action"])) {
     }
 }
 
-
-$p_id = $_POST['p_id'];
-
-if (!isset($_GET["update"])) {
-    $_SESSION['shopping_cart'] = array(
-        "cart_id" => $p_id,
-        "quantity" => 1
-    );
-} else {
-    if (in_array($p_id, $_SESSION['shopping_cart'])) {
-        $_SESSION['shopping_cart'] = array(
-            "cart_id" => $p_id,
-            "quantity" => $_SESSION['shopping_cart']["quantity"]++
-        );
-
-    }
-}
-
 ?>
 <head>
     <style>
