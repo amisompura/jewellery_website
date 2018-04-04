@@ -1,6 +1,6 @@
 <!-- <?php
 session_start();
-$URL = "http://" . $_SERVER['HTTP_HOST'] . '/jewellery/';
+$URL = "http://" . $_SERVER['HTTP_HOST'] . '/jewellery1/';
 include "connection.php";
 
 if (isset($_POST["addToProduct"])) {

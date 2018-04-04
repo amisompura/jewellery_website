@@ -68,25 +68,25 @@
                 },
                 messages: {
                     fname: {
-                        required: "*We Need your Username",
+                        required: "*We need your username.",
                         minlength: jQuery.validator.format("At least {0} characters required!")
                     },
                     password: {
-                        required: "*We Need Your Password",
+                        required: "*We need your password.",
                         minlength: jQuery.validator.format("At least {0} characters required")
                     },
                     gender: {
-                        required: "*We Need Your Gender"
+                        required: "*We need your gender."
                     },
                     email: {
-                        required: "*We Need Your Email Address"
+                        required: "*We need your email address."
                     },
                     contact_no: {
-                        required: "*We need your Contact",
+                        required: "*We need your contact number.",
                         minlength: jQuery.validator.format("At least {0} Digits required!")
                     },
                     regidate: {
-                        required: "*We Need Your Registration Date"
+                        required: "*We need your registration date."
                     }
                 }
             });
@@ -176,8 +176,10 @@ include "header.php";
 
 
                 <?php
+
                 include "connection.php";
-                error_reporting(E_ALL);
+
+                //                error_reporting(E_ERROR);
 
                 if (isset($_POST["submit"])) {
 
@@ -201,7 +203,7 @@ include "header.php";
 </section>
 
 <?php
-include "footer1.php";
+include "footer.php";
 ?>
 
 <!-- Back to top -->

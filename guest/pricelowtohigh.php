@@ -1,3 +1,4 @@
+
 <?php
 $URL = "http://" . $_SERVER['HTTP_HOST'] . '/jewellery/';
 
@@ -6,13 +7,13 @@ include "connection.php";
 $q = "select * from category";
 $rs = mysqli_query($c, $q);
 ?>
+
 <?php
 $output = '';
-$query = "select * from product ORDER BY price asc";
+$query = "SELECT * FROM product WHERE (price BETWEEN 500 AND 4000) and cat_id in (1)";
 $rs2 = mysqli_query($c, $query);
 
 ?>
-
 
 <?php
 while ($row2 = mysqli_fetch_array($rs2)) {

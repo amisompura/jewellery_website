@@ -1,6 +1,6 @@
 komal/
 <?php
-$URL = "http://" . $_SERVER['HTTP_HOST'] . '/jewellery1/';
+$URL = "http://" . $_SERVER['HTTP_HOST'] . '/jewellery/';
 
 include "connection.php";
 

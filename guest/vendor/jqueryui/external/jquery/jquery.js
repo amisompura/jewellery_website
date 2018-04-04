@@ -3160,6 +3160,7 @@
     var rnotwhite = (/\S+/g);
 
 
+
 // Convert String-formatted options into Object-formatted ones
     function createOptions(options) {
         var object = {};
@@ -3693,6 +3694,8 @@
 
 // Kick off the DOM ready check even if the user does not
     jQuery.ready.promise();
+
+
 
 
 // Support: IE<9
@@ -8967,6 +8970,8 @@
     });
 
 
+
+
 // Return jQuery for attributes-only inclusion
 
 
@@ -10354,6 +10359,8 @@
     }
 
 
+
+
 // Install script dataType
     jQuery.ajaxSetup({
         accepts: {
@@ -10536,6 +10543,8 @@
     });
 
 
+
+
 // data: string of html
 // context (optional): If specified, the fragment will be created in this context,
 // defaults to document
@@ -10637,6 +10646,8 @@
 
         return this;
     };
+
+
 
 
 // Attach a bunch of functions for handling common AJAX events
@@ -10937,6 +10948,8 @@
     };
 
     jQuery.fn.andSelf = jQuery.fn.addBack;
+
+
 
 
 // Register as a named AMD module, since jQuery can be concatenated with other

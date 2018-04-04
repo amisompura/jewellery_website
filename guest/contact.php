@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Contact</title>
+    <title>CONTACT AS</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!--===============================================================================================-->
@@ -26,25 +26,92 @@
     <link rel="stylesheet" type="text/css" href="vendor/select2/select2.min.css">
     <!--===============================================================================================-->
     <link rel="stylesheet" type="text/css" href="vendor/slick/slick.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <!--===============================================================================================-->
     <link rel="stylesheet" type="text/css" href="css/util.css">
     <link rel="stylesheet" type="text/css" href="css/main.css">
-    <!--===============================================================================================-->
+    <style type="text/css">
+        .error {
+            color: tomato !important;
+        }
+
+    </style>
+    <style>
+        select {
+            width: 100%;
+            padding: 16px 20px;
+            border: none;
+            border-radius: 4px;
+            background-color: #f1f1f1;
+        }
+
+    </style>
+    <script>
+        function test() {
+            $("#register").validate({
+                rules: {
+                    contact_name: {
+                        required: true,
+                        minlength: 2
+                    },
+                    city: {
+                        required: true
+                    },
+                    gender: {
+                        required: true
+                    },
+                    email: {
+                        required: true,
+                        email: true
+                    },
+                    contact_no: {
+                        required: true,
+                        minlength: 10
+                    }
+                },
+                messages: {
+                    contact_name: {
+                        required: "*We Need your Username",
+                        minlength: jQuery.validator.format("At least {0} characters required!")
+                    },
+                    city: {
+                        required: "*We Need Your city Name"
+                    },
+                    email: {
+                        required: "*We Need Your Email Address"
+                    },
+                    contact_no: {
+                        required: "*We need your Contact",
+                        minlength: jQuery.validator.format("At least {0} Digits required!")
+                    }
+                }
+            });
+        }
+    </script>
+    <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/jquery.validate.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/additional-methods.min.js"></script>
 </head>
+
 <body class="animsition">
 
 <?php
 include "header.php";
 ?>
 
-<!-- Title Page -->
-<section class="bg-title-page p-t-40 p-b-50 flex-col-c-m" style="background-image: url(images/contact12.jpg);">
-    <h2 class="l-text2 t-center" style="color:black">
+<div class="bread-crumb bgwhite flex-w p-l-52 p-r-15 p-t-30 p-l-15-sm">
 
-    </h2>
-</section>
+    <a href="#" onClick="history.go(-1); return false;" class="s-text16">Go back
+        <i class="fa fa-angle-left m-l-8 m-r-9" aria-hidden="true"></i>
+    </a>
+    <span class="s-text17">
+	    CONTACT AS
+    </span>
 
-<!-- content page -->
+</div>
+
 <section class="bgwhite p-t-66 p-b-60">
     <div class="container">
         <div class="row">
@@ -55,27 +122,31 @@ include "header.php";
             </div>
 
             <div class="col-md-6 p-b-30">
-                <form class="leave-comment" method="POST" action="contact.php">
+
+                <form id="register" method="POST" action="contact.php" class="leave-comment">
                     <h4 class="m-text26 p-b-36 p-t-15">
-                        Send us your message
+                        SEND AS MESSAGE
                     </h4>
 
-                    <div class="bo4 of-hidden size15 m-b-20">
-                        <input class="sizefull s-text7 p-l-22 p-r-22" type="text" name="contact_name"
-                               placeholder="Full Name">
+                    <div>
+                        <input type="text" id="contact_name" name="contact_name" placeholder="Enter Your Name"
+                               class="form-control" style="color: black;height: 60px">
+
+                    </div>
+                    <br>
+                    <div>
+                        <input type="email" id="email" name="email" placeholder="Enter Your Email Address"
+                               class="form-control" style="color: black;height: 60px">
+                    </div>
+                    <br>
+                    <div>
+                        <input type="text" id="contact_no" name="contact_no" placeholder="Enter Your ContactNumber"
+                               class="form-control" style="color: black;height: 60px">
                     </div>
 
-                    <div class="bo4 of-hidden size15 m-b-20">
-                        <input class="sizefull s-text7 p-l-22 p-r-22" type="text" name="email"
-                               placeholder="Email Address">
-                    </div>
-
-                    <div class="bo4 of-hidden size15 m-b-20">
-                        <input class="sizefull s-text7 p-l-22 p-r-22" type="text" name="contact_no"
-                               placeholder="Phone Number">
-                    </div>
-                    <div class="bo4 of-hidden size15 m-b-20">
-                        <select id="city" name="city" class="sizefull s-text7 p-l-22 p-r-22">
+                    <br>
+                    <div>
+                        <select id="city" name="city">
                             <option value="">Select City</option>
                             <option value="Ahmedabad">Ahmedabad</option>
                             <option value="Puna">Puna</option>
@@ -83,54 +154,49 @@ include "header.php";
                             <option value="Rajkot">Rajkot</option>
                             <option value="Jamnagar">Jamnagar</option>
                             <option value="Mehsana">Mehsana</option>
-                            <option value="Mumbai">USA</option>
-                        </select>
-                    </div>
+
+                        </select></div>
+                    <br>
 
                     <div>
-                        <textarea class="dis-block s-text7 size20 bo4 p-l-22 p-r-22 p-t-13 m-b-20" name="message"
-                                  placeholder="Message"></textarea>
+                        <input type="text" id="message" name="message" placeholder="Enter Message" class="form-control"
+                               style="color: black;height: 60px">
                     </div>
-                    <div class="w-size25">
-                        <!-- Button -->
-                        <input type="submit" class="flex-c-m size2 bg1 bo-rad-23 hov1 m-text3 trans-0-4" name="send"
-                               value="SEND">
-
+                    <br>
+                    <div>
+                        <button class="flex-c-m size2 bg4 bo-rad-23 hov1 m-text3 trans-0-4" type="submit" name="submit"
+                                value="submit" onclick="test();">SUBMIT IT
+                        </button>
                     </div>
-                </form>
-
 
                 <?php
                 include "connection.php";
-                error_reporting(E_ALL);
+                //error_reporting(E_ERROR);
 
-                if (isset($_POST["send"])) {
-
+                if (isset($_POST["submit"])) {
+                    //$contact_id = $_POST["contact_id"];
                     $contact_name = $_POST["contact_name"];
                     $email = $_POST["email"];
                     $contact_no = $_POST["contact_no"];
                     $city = $_POST["city"];
                     $message = $_POST["message"];
 
-                    $q = "INSERT INTO contactas(contact_name,email,contact_no,city,message) 
-                                VALUES('$contact_name','$email','$contact_no','$city','$message')";
-                    //echo $q;
-                    $rs = mysqli_query($c, $q);
+                    $q = "INSERT INTO contact(contact_name, email, contact_no, city,message) VALUES ('$contact_name', '$email', '$contact_no', '$city', '$message')";
+                    mysqli_query($c, $q);
 
-                    // header("loaction:login.php");
+                    header("loaction:index.php");
                 }
 
                 ?>
-
+                </form>
             </div>
         </div>
     </div>
 </section>
 
 <?php
-include "footer.php";
+include "footer1.php";
 ?>
-
 
 <!-- Back to top -->
 <div class="btn-back-to-top bg0-hov" id="myBtn">
@@ -145,7 +211,7 @@ include "footer.php";
 
 
 <!--===============================================================================================-->
-<script type="text/javascript" src="vendor/jquery/jquery-3.2.1.min.js"></script>
+<!-- <script type="text/javascript" src="vendor/jquery/jquery-3.2.1.min.js"></script> -->
 <!--===============================================================================================-->
 <script type="text/javascript" src="vendor/animsition/js/animsition.min.js"></script>
 <!--===============================================================================================-->

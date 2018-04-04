@@ -134,6 +134,7 @@ ul, li {
     list-style-type: none;
 }
 
+
 /* ------------------------------------ */
 input {
     outline: none;
@@ -195,6 +196,7 @@ iframe {
     border: none !important;
 }
 
+
 /* ------------------------------------ */
 .container {
     max-width: 1200px;
@@ -203,6 +205,10 @@ iframe {
 .slick-slide {
     outline: none !important;
 }
+
+
+
+
 
 /*[ LOADDING ]
 ///////////////////////////////////////////////////////////
@@ -484,6 +490,8 @@ iframe {
     color: #555555;
 }
 
+
+
 /*[ rs3-select2 ]
 -----------------------------------------------------------
 */
@@ -514,6 +522,7 @@ iframe {
     right: 5px;
 }
 
+
 /*[ Header ]
 ///////////////////////////////////////////////////////////
 */
@@ -528,6 +537,7 @@ iframe {
 .fixed-header {
     height: 110px;
 }
+
 
 /*[ Header Desktop ]
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>*/
@@ -559,6 +569,7 @@ iframe {
     justify-content: center;
     align-items: center;
 }
+
 
 /* ------------------------------------ */
 
@@ -607,6 +618,7 @@ iframe {
     padding-right: 38px;
 }
 
+
 /*[ Menu ]
 ===========================================================*/
 .wrap_header {
@@ -632,6 +644,7 @@ iframe {
     height: 65px;
 }
 
+
 /*[ Logo ]
 -----------------------------------------------------------*/
 .logo {
@@ -649,6 +662,7 @@ iframe {
 .logo img {
     max-height: 27px;
 }
+
 
 /*[ Menu ]
 -----------------------------------------------------------*/
@@ -946,7 +960,6 @@ li.sale-noti > a {
     padding-bottom: 25px;
     padding-right: 3px;
 }
-
 /* ------------------------------------ */
 .header-cart-buttons {
     display: -webkit-box;
@@ -962,6 +975,8 @@ li.sale-noti > a {
 .header-cart-wrapbtn {
     width: calc((100% - 10px) / 2);
 }
+
+
 
 /*[ Header Mobile ]
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>*/
@@ -1014,6 +1029,7 @@ li.sale-noti > a {
     margin-top: 5px;
 }
 
+
 /*[ Header icon mobile ]
 -----------------------------------------------------------*/
 .header-icons-mobile {
@@ -1025,7 +1041,6 @@ li.sale-noti > a {
     align-items: center;
     margin-right: 15px;
 }
-
 .linedivide2 {
     display: block;
     height: 20px;
@@ -1080,6 +1095,7 @@ li.sale-noti > a {
     color: white;
     position: relative;
 }
+
 
 .side-menu .main-menu .arrow-main-menu {
     font-size: 14px;
@@ -1159,6 +1175,7 @@ li.sale-noti > a {
     align-items: center;
 }
 
+
 /*[ Header2 ]
 ///////////////////////////////////////////////////////////
 */
@@ -1207,6 +1224,7 @@ li.sale-noti > a {
     top: 0px;
 }
 
+
 /*[ Header3 ]
 ///////////////////////////////////////////////////////////
 */
@@ -1246,6 +1264,7 @@ li.sale-noti > a {
     width: 100%;
     background-color: white;
 }
+
 
 /*[ Logo ]
 -----------------------------------------------------------*/
@@ -1319,6 +1338,7 @@ li.sale-noti > a {
     padding: 10px 8px;
 }
 
+
 /*[ Page sidebar ]
 -----------------------------------------------------------
 */
@@ -1357,6 +1377,8 @@ li.sale-noti > a {
         margin-left: 0px;
     }
 }
+
+
 
 /*[ Slide1 ]
 ///////////////////////////////////////////////////////////
@@ -1491,6 +1513,9 @@ li.sale-noti > a {
     }
 }
 
+
+
+
 /*[ Slide2 ]
 ///////////////////////////////////////////////////////////
 */
@@ -1620,6 +1645,7 @@ li.sale-noti > a {
     margin-top: 0;
 }
 
+
 /*[ Block1 ]
 ///////////////////////////////////////////////////////////
 */
@@ -1639,6 +1665,7 @@ li.sale-noti > a {
     -o-box-shadow: 0 1px 3px 0px rgba(0, 0, 0, 0.1);
     -ms-box-shadow: 0 1px 3px 0px rgba(0, 0, 0, 0.1);
 }
+
 
 /*[ Block2 ]
 ///////////////////////////////////////////////////////////
@@ -1759,6 +1786,7 @@ li.sale-noti > a {
     transform: scale(1);
 }
 
+
 /*[ Block4 ]
 ///////////////////////////////////////////////////////////
 */
@@ -1865,6 +1893,7 @@ li.sale-noti > a {
     transform: scale(1);
 }
 
+
 /*[ BG Title Page ]
 ///////////////////////////////////////////////////////////
 */
@@ -1898,13 +1927,11 @@ li.sale-noti > a {
     border: none;
     background-color: #e1e1e1;
 }
-
 .leftbar #filter-bar .noUi-connect {
     background-color: #c5c5c5;
     border: none;
     box-shadow: none;
 }
-
 .leftbar #filter-bar .noUi-handle {
     width: 13px;
     height: 13px;
@@ -1917,11 +1944,9 @@ li.sale-noti > a {
     box-shadow: none;
     outline: none;
 }
-
 .leftbar #filter-bar .noUi-handle:before {
     display: none;
 }
-
 .leftbar #filter-bar .noUi-handle:after {
     display: none;
 }
@@ -2006,6 +2031,7 @@ li.sale-noti > a {
     color: white;
 }
 
+
 /*[ Slick3 ]
 ///////////////////////////////////////////////////////////
 */
@@ -2051,6 +2077,7 @@ li.sale-noti > a {
     border: 3px solid #888888;
 }
 
+
 /*[ Dropdown content ]
 ///////////////////////////////////////////////////////////
 */
@@ -2061,6 +2088,7 @@ li.sale-noti > a {
 .show-dropdown-content .up-mark {
     display: none;
 }
+
 
 /*[ Cart ]
 ///////////////////////////////////////////////////////////
@@ -2109,22 +2137,18 @@ li.sale-noti > a {
     width: 225px;
     padding-left: 50px;
 }
-
 .table-shopping-cart .column-2 {
     width: 330px;
     padding-right: 30px;
 }
-
 .table-shopping-cart .column-3 {
     width: 133px;
     padding-right: 30px;
 }
-
 .table-shopping-cart .column-4 {
     width: 355px;
     padding-right: 30px;
 }
-
 .table-shopping-cart .column-5 {
     padding-right: 30px;
 }
@@ -2151,6 +2175,7 @@ li.sale-noti > a {
 .table-shopping-cart .table-row .column-2 {
     font-size: 15px;
 }
+
 
 /* ------------------------------------ */
 .cart-img-product {
@@ -2192,6 +2217,7 @@ li.sale-noti > a {
     opacity: 1;
 }
 
+
 /*[ Tags ]
 ///////////////////////////////////////////////////////////
 */
@@ -2215,6 +2241,7 @@ li.sale-noti > a {
 .tag-item:hover {
     border: 1px solid #e65540;
 }
+
 
 /*[ tab01 ]
 ///////////////////////////////////////////////////////////
@@ -2270,6 +2297,7 @@ li.sale-noti > a {
     }
 }
 
+
 /*[ Modal video 01 ]
 ///////////////////////////////////////////////////////////
 */
@@ -2296,7 +2324,7 @@ body {
 #modal-video-01 {
     background-color: rgba(0, 0, 0, 0.8);
     z-index: 1350;
-
+  
 }
 
 #modal-video-01 .modal-dialog {
@@ -2364,6 +2392,7 @@ body {
     opacity: 1;
 }
 
+
 /*[ Input NumProduct ]
 ///////////////////////////////////////////////////////////
 */
@@ -2376,7 +2405,7 @@ input.num-product {
 input.num-product::-webkit-outer-spin-button,
 input.num-product::-webkit-inner-spin-button {
     -webkit-appearance: none;
-    margin: 0;
+    margin: 0; 
 }
 
 

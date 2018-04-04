@@ -1,3 +1,87 @@
+<?php
+
+include "connection.php";
+
+
+if (isset($_POST["add_to_cart"])) {
+    // error_reporting(E_ALL);
+    // $cart_id = $_POST['cart_id'];
+
+    $p_id = $_GET["p_id"];
+    $p_name = $_POST['hidden_name'];
+    $image = $_POST['hidden_image'];
+    $qty = $_POST['qty'];
+    $Price = $_POST['hidden_price'];
+    $total_amt = $_POST['hidden_total'];
+
+
+    $sql = "INSERT INTO cart1(p_id, p_name, image, qty, Price, total_amt) VALUES ('$p_id', '$p_name', '$image', '$qty', '$Price', NULL)";
+
+    $rs = mysqli_query($c, $sql);
+
+
+    if (isset($_SESSION["shopping_cart"])) {
+
+
+        $item_array_id = array_column($_SESSION["shopping_cart"], "item_id");
+        if (!in_array($_GET["p_id"], $item_array_id)) {
+            $count = count($_SESSION["shopping_cart"]);
+            $item_array = array(
+
+                'item_id' => $_GET["p_id"],
+                'item_image' => $_POST["hidden_image"],
+                'item_name' => $_POST["hidden_name"],
+                'item_price' => $_POST["hidden_price"],
+                'item_quntity' => $_POST["quntity"],
+                'item_total' => $_POST["hidden_total"],
+            );
+
+            $_SESSION["shopping_cart"][$count] = $item_array;
+        } else {
+            echo '<script>alert("item already Added")</script>';
+            echo '<script>window.location="cart.php"</script>';
+        }
+    } else {
+        $item_array = array(
+
+            'item_id' => $_GET["p_id"],
+            'item_image' => $_POST["hidden_image"],
+            'item_name' => $_POST["hidden_name"],
+            'item_price' => $_POST["hidden_price"],
+            'item_quntity' => $_POST["quntity"],
+            'item_total' => $_POST["hidden_total"],
+        );
+        $_SESSION["shopping_cart"]["p_id"] = $item_array;
+    }
+}
+
+if (isset($_GET["action"])) {
+    if ($_GET["action"] == "delete") {
+        $p_id = $_GET["p_id"];
+
+        $sql = "DELETE FROM cart WHERE p_id = '$p_id'";
+        $rs = mysqli_query($c, $sql);
+
+        foreach ($_SESSION["shopping_cart"] as $keys => $values) {
+            if ($values["item_id"] == $_GET["p_id"]) {
+                unset($_SESSION["shopping_cart"][$keys]);
+                echo '<script>alert("item Removed")</script>';
+                echo '<script>window.location="cart.php"</script>';
+
+            }
+        }
+
+    }
+}
+
+if (isset($_GET["action"])) {
+    if ($_GET["action"] == "remove") {
+        unset($_SESSION["shopping_cart"]);
+
+    }
+}
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -142,54 +226,49 @@ include "header.php";
         ?>
 
         <div class="w-size13 p-t-30 respon5">
-            <form method="POST" action="product1.php?action=addproduct&p_id=<?php echo $row[0]; ?>">
-                <div class="wrap-slick3 flex-sb flex-w">
+            <!--				<form method="POST" action = "product1.php?action=add&cat_id=--><?php //echo $row[0];
+            ?><!--">-->
+            <div class="wrap-slick3 flex-sb flex-w">
 
-                    <div class="wrap-slick3-dots"></div>
+                <div class="wrap-slick3-dots"></div>
 
-                    <div class="slick3">
+                <div class="slick3">
+                    <div class="item-slick3" data-thumb="<?php echo $URL . $row[10] ?>">
+                        <div class="wrap-pic-w img-zoom-container">
+                            <img id='myImg' src=<?php echo $URL . $row[10] ?> alt="image"
+                                 style="width:600px;height: 600px;">
+                            <div class="img-zoom-container">
 
-                        <div class="item-slick3" data-thumb="<?php echo $URL . $row[10] ?>">
-                            <div class="wrap-pic-w img-zoom-container">
-                                <img id='myImg' src=<?php echo $URL . $row[10] ?> alt="image"
-                                     style="width:600px;height: 600px;">
-                                <div class="img-zoom-container">
-
-                                    <div id="myresult" class="img-zoom-result"></div>
-                                </div>
-                            </div>
-
-                        </div>
-
-                        <div class="item-slick3" data-thumb="<?php echo $URL . $row[11] ?>">
-                            <div class="wrap-pic-w img-zoom-container">
-                                <img id='myImg1' src=<?php echo $URL . $row[11] ?> alt="image"
-                                     style="width:600px;height: 600px;">
-                                <div class="img-zoom-container">
-
-                                    <div id="myresult1" class="img-zoom-result"></div>
-                                </div>
+                                <div id="myresult" class="img-zoom-result"></div>
                             </div>
                         </div>
 
-                        <div class="item-slick3" data-thumb="<?php echo $URL . $row[12] ?>">
-                            <div class="wrap-pic-w img-zoom-container">
-                                <img id='myImg2' src=<?php echo $URL . $row[12] ?> alt="image" style="
-								width:600px;height: 600px;">
-                                <div class="img-zoom-container">
+                    </div>
 
-                                    <div id="myresult2" class="img-zoom-result"></div>
-                                </div>
+                    <div class="item-slick3" data-thumb="<?php echo $URL . $row[11] ?>">
+                        <div class="wrap-pic-w img-zoom-container">
+                            <img id='myImg1' src=<?php echo $URL . $row[11] ?> alt="image"
+                                 style="width:600px;height: 600px;">
+                            <div class="img-zoom-container">
+
+                                <div id="myresult1" class="img-zoom-result"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="item-slick3" data-thumb="<?php echo $URL . $row[12] ?>">
+                        <div class="wrap-pic-w img-zoom-container">
+                            <img id='myImg2' src=<?php echo $URL . $row[12] ?> alt="image"
+                                 style="width:600px;height: 600px;">
+                            <div class="img-zoom-container">
+
+                                <div id="myresult2" class="img-zoom-result"></div>
                             </div>
                         </div>
                     </div>
                 </div>
+            </div>
         </div>
-        <input type="hidden" name="hidden_uid" value="<?php echo $row1['user_id']; ?>">
-        <input type="hidden" name="hidden_image" value="<?php echo $row1['image']; ?>">
-        <input type="hidden" name="hidden_name" value="<?php echo $row1['p_name']; ?>">
-        <input type="hidden" name="hidden_price" value="<?php echo $row1['price']; ?>">
-        <input type="hidden" name="hidden_total" value="<?php echo $row1['total_amt']; ?>">
 
         <div class="w-size14 p-t-30 respon5">
             <h4 class="product-detail-name m-text16 p-b-13">
@@ -222,13 +301,18 @@ include "header.php";
             }
             ?>
 
-
+            <input type="hidden" name="hidden_uid" value="<?php echo $row1['user_id']; ?>">
+            <input type="hidden" name="hidden_image" value="<?php echo $row1['image']; ?>">
+            <input type="hidden" name="hidden_name" value="<?php echo $row1['p_name']; ?>">
+            <input type="hidden" name="hidden_price" value="<?php echo $row1['price']; ?>">
+            <input type="hidden" name="hidden_total" value="<?php echo $row1['total_amt']; ?>">
             <div class='flex-r-m flex-w p-t-10'>
                 <div class='w-size16 flex-m flex-w'>
                     <div class='flex-w bo5 of-hidden m-r-22 m-t-10 m-b-10'>
                         <button class='btn-num-product-down color1 flex-c-m size7 bg8 eff2'>
                             <i class='fs-12 fa fa-minus' aria-hidden='true'></i>
                         </button>
+
 
                         <input class='size8 m-text18 t-center num-product' type='number' name='num-product' value='1'>
 
@@ -237,23 +321,18 @@ include "header.php";
                         </button>
                     </div>
                     <br>
-                    <div class='btn-addcart-product-detail size9 trans-0-4 m-t-10 m-b-10'>
+                    <div class=' size9 trans-0-4 m-t-10 m-b-10'>
                         <!-- Button -->
-                        <button class='flex-c-m sizefull bg1 bo-rad-23 hov1 s-text1 trans-0-4' name="add_to_cart">
-                            Add to Cart
-                        </button>
+                        <input class="flex-c-m size1 bg4 bo-rad-23 hov1 s-text1 trans-0-4" type="submit"
+                               name="add_to_cart" value="Add To Cart">
                         <br>
-                        <input action="action" class="flex-c-m sizefull bg1 bo-rad-23 hov1 s-text1 trans-0-4"
-                               onclick="window.history.go(-1); return false;" type="button" value="Back"/>
-
+                        <button class='flex-c-m sizefull bg1 bo-rad-23 hov1 s-text1 trans-0-4'
+                                onClick="history.go(-1); return false;">
+                            Back
+                        </button>
                     </div>
                 </div>
             </div>
-        </div>
-
-
-        <div class="p-b-45">
-
         </div>
 
         <!--  -->

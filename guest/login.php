@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -37,8 +38,6 @@
             color: tomato !important;
         }
     </style>
-
-
     <script>
         function test() {
             $("#register").validate({
@@ -68,13 +67,21 @@
     <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/jquery.validate.min.js"></script>
     <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/additional-methods.min.js"></script>
+    <script>
+        function myFunction() {
+            var x = document.getElementById("password");
+            if (x.type === "password") {
+                x.type = "text";
+            } else {
+                x.type = "password";
+            }
+        }
+    </script>
 </head>
 <body class="animsition">
 
 <?php
-
 include "header.php";
-
 ?>
 
 <div class="bread-crumb bgwhite flex-w p-l-52 p-r-15 p-t-30 p-l-15-sm">
@@ -111,7 +118,8 @@ include "header.php";
                     <div class="input-group">
 
                         <input type="password" id="password" name="password" placeholder="Enter Your password"
-                               class="form-control" style="height: 50px">
+                               class="form-control" style="height: 50px"><br>
+                        <h6 align="right"><input type="checkbox" onclick="myFunction()"><b>Show Password</b></h6>
                     </div>
                     <br>
                     <button class="flex-c-m size2 bg4 bo-rad-23 hov1 m-text3 trans-0-4" type="submit" name="login"
@@ -121,6 +129,7 @@ include "header.php";
                     <br>
 
                     <div class="inline-control">
+
                         <p align="right"><a href="forgot.php" style="color:tomato">Forgot Password ?</a></p>
 
                         <p style="color:blue" align="right">Do Not Have an Acoount With As? | <a href="register.php"
@@ -141,21 +150,12 @@ include "header.php";
                         $rs = mysqli_query($c, $q);
                         $count = mysqli_num_rows($rs);
                         if ($count == 1) {
-
-                            while ($row = mysqli_fetch_array($rs)) {
-                                echo $userId = $row[0]['user_id'];
-                            }
                             $_SESSION["email"] = $_POST["email"];
-                            $_SESSION["userId"] = $userId;
-                            // header("location:http:checkout.php");
-                            echo "<script type='text/javascript'>
-window.location.href = 'http://localhost/jewellery/guest/checkout.php';
+//           header("location:http:checkout.php");
+                            echo "<script type='text/javascript'>window.location.href = 'checkout.php'
 </script>";
                         } else {
-
                             echo "<script>alert('please check username and password')</script>";
-                            // header('Location:index.php');
-
                         }
 
                     }
@@ -169,7 +169,7 @@ window.location.href = 'http://localhost/jewellery/guest/checkout.php';
 </section>
 
 <?php
-include "footer1.php";
+include "footer.php";
 ?>
 
 <script type="text/javascript" src="vendor/animsition/js/animsition.min.js"></script>

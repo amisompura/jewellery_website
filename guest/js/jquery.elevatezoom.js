@@ -484,6 +484,7 @@ if (typeof Object.create !== 'function') {
             //end ove image
 
 
+
 //				var delta = parseInt(e.originalEvent.wheelDelta || -e.originalEvent.detail);
 
             //      $(this).empty();

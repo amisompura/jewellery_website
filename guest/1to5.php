@@ -115,21 +115,7 @@ include "header.php";
                                   style="text-decoration: none; color:silver;">RS.2500-3000</a></label>
                     </fieldset>
                 </div>
-                <!--<div class="widget">
-                    <h3>Condition:</h3>
-                    <fieldset>
-                        <input checked type="checkbox">
-                        <label>New</label>
-                        <input type="checkbox">
-                        <label>Used</label>
-                    </fieldset>
-                </div>
-                <div class="widget">
-                    <h3>Price range:</h3>
-                    <fieldset>
-                        <div id="price-range"></div>
-                    </fieldset>
-                </div>-->
+
             </aside>
             <div id="content">
                 <?php

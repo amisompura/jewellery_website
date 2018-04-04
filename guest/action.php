@@ -15,7 +15,7 @@ if (isset($_POST["email"])) {
             echo "Thank you for Subscribing..";
         }
     } else {
-        echo "We Need Your Email Address..";
+        echo "please enter a valid email..";
     }
 
 }

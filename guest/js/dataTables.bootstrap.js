@@ -89,7 +89,7 @@ if ($.fn.dataTable.Api) {
                             .append($('<a>', {
                                     'href': '#'
                                 })
-                                    .html(btnDisplay)
+                                .html(btnDisplay)
                             )
                             .appendTo(container);
 

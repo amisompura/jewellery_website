@@ -1,5 +1,5 @@
 <?php
-$URL = "http://" . $_SERVER['HTTP_HOST'] . '/jewellery1/komal/';
+$URL = "http://" . $_SERVER['HTTP_HOST'] . '/jewellery/';
 include "connection.php";
 $output = " ";
 $query = "SELECT * from product WHERE subcat_id = '24'";

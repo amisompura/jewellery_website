@@ -1,5 +1,6 @@
 <?php
 $URL = "http://" . $_SERVER['HTTP_HOST'] . '/jewellery/';
+
 include "connection.php";
 
 $output = '';
@@ -7,6 +8,7 @@ $query = "SELECT * FROM product WHERE price <= " . $_POST['price'] . " AND cat_i
 $result = mysqli_query($c, $query);
 if (mysqli_num_rows($result) > 0) {
     while ($row = mysqli_fetch_array($result)) {
+
         $image = isset($row['image']) ? $URL . $row['image'] : '';
         $output .= '  
                     <div class="col-sm-12 col-md-6 col-lg-4 p-b-50" >
@@ -24,9 +26,8 @@ if (mysqli_num_rows($result) > 0) {
 
                     <div class="block2-btn-addcart w-size1 trans-0-4">
                       <!-- Button -->
-                      <button class="flex-c-m size1 bg4 bo-rad-23 hov1 s-text1 trans-0-4">
-                        Add to Cart
-                      </button>
+                      <input class="flex-c-m size1 bg4 bo-rad-23 hov1 s-text1 trans-0-4" type = "submit" name = "add_to_cart" value="Add To Cart">
+									
                     </div>
                   </div>
                 </div>
@@ -51,6 +52,9 @@ if (mysqli_num_rows($result) > 0) {
 
 
 } else {
-    echo "<h3 style='color: tomato'>Under This Price Product Not found.</h3>";
+    echo "<div class=\"info\">
+  <p><strong>Note!</strong> Product Not Available Under This Price. </p>
+</div>
+</div>";
 }
 ?>

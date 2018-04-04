@@ -1,4 +1,5 @@
 <?php
+
 $URL = "http://" . $_SERVER['HTTP_HOST'] . '/jewellery/';
 
 include "connection.php";
@@ -6,19 +7,18 @@ include "connection.php";
 $q = "select * from category";
 $rs = mysqli_query($c, $q);
 ?>
+
 <?php
 $output = '';
-$query = "select * from product ORDER BY price desc";
+$query = "select * from product order by price desc";
 $rs2 = mysqli_query($c, $query);
 
 ?>
 
-
 <?php
 while ($row2 = mysqli_fetch_array($rs2)) {
     $image = isset($row2['image']) ? $URL . $row2['image'] : '';
-    $output .= '
-                             	
+    $output .= '	
 						<div class="col-sm-12 col-md-6 col-lg-4 p-b-50" >
 							<!-- Block2 -->
 							<article>
@@ -57,7 +57,6 @@ while ($row2 = mysqli_fetch_array($rs2)) {
 </article>';
 
 }
-
 echo $output;
 exit;
 ?>

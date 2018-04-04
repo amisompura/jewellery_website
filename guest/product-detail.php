@@ -67,11 +67,14 @@ include "header.php";
 <div class="container bgwhite p-t-35 p-b-80">
     <div class="flex-w flex-sb">
         <?php
+
         include "connection.php";
+
         $cat_id = $_GET["cat_id"];
 
 
         $s = "select * from product where p_id='$cat_id'";
+
         $rs = mysqli_query($c, $s);
         while ($row = mysqli_fetch_row($rs)) {
 
@@ -165,9 +168,9 @@ include "header.php";
 
 							<div class='btn-addcart-product-detail size9 trans-0-4 m-t-10 m-b-10'>
 								<!-- Button -->
-								<button class='flex-c-m sizefull bg1 bo-rad-23 hov1 s-text1 trans-0-4'>
-									Add to Cart
-								</button>
+								<input type = \"submit\" name = \"add_to_cart\" 
+												value = \"AddToCart\" id=\"addtocart\" class=\"flex-c-m size1 bg4 bo-rad-23 hov1 s-text1 trans-0-4\" >
+
 							</div>
 						</div>
 					</div>

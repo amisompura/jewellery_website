@@ -1,4 +1,4 @@
-<!-- New Product -->
+<!-- New Product -->			
 <?php
 include "connection.php";
 $query = "select * from category";

@@ -6,5 +6,5 @@ showPage = function (page) {
     $("#block2").each(function (n) {
         if (n >= pageSize * (page - 1) && n < pageSize * page)
             $(this).show();
-    });
+    });        
 }

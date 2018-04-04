@@ -83,9 +83,11 @@ session_start();
     <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/additional-methods.min.js"></script>
 </head>
 <body class="animsition">
+
 <?php
 include "header.php";
 ?>
+
 <div class="bread-crumb bgwhite flex-w p-l-52 p-r-15 p-t-30 p-l-15-sm">
     <a href="#" onClick="history.go(-1); return false;" class="s-text16">Go back
         <i class="fa fa-angle-left m-l-8 m-r-9" aria-hidden="true"></i>
@@ -142,19 +144,19 @@ include "header.php";
 
                         include "connection.php";
 
-
                         $q = "UPDATE user SET fname = '$fname',password = '$password' WHERE email = '$email'";
-//echo $q;  
+                        //echo $q;
 
                         mysqli_query($c, $q);
 
                         echo "<script type='text/javascript'>
-window.location.href = 'http://localhost/jewellery/guest/login.php';
-</script>";
-// header("location:login.php");
+            window.location.href = 'http://localhost/jewellery/guest/login.php';
+            </script>";
+                        // header("location:login.php");
 
                     }
                     ?>
+
                 </form>
             </div>
         </div>
@@ -162,7 +164,7 @@ window.location.href = 'http://localhost/jewellery/guest/login.php';
 </section>
 
 <?php
-include "footer1.php";
+include "footer.php";
 ?>
 <!-- Back to top -->
 <div class="btn-back-to-top bg0-hov" id="myBtn">

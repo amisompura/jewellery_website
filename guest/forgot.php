@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -98,11 +99,9 @@ include "header.php";
                     <br>
                     <div>
                         <button class="flex-c-m size2 bg4 bo-rad-23 hov1 m-text3 trans-0-4" type="submit" name="submit"
-                                value="Submit" onclick="test();">SUBMIT
+                                value="submit" onclick="test();">SUBMIT
                         </button>
                     </div>
-
-
                     <?php
                     include "connection.php";
 
@@ -111,13 +110,13 @@ include "header.php";
                         $email = $_POST["email"];
 
 
-                        $q = "SELECT * FROM user WHERE email = '$email'";
+                        $q = "select * from user where email='$email'";
 
                         $rs = mysqli_query($c, $q);
                         $count = mysqli_num_rows($rs);
                         if ($count == 1) {
                             $_SESSION["email"] = $_POST["email"];
-                            // header("location:resetforgot.php");
+                            //header("location:resetforgot.php");
                             echo "<script type='text/javascript'>
 window.location.href = 'http://localhost/jewellery/guest/resetforgot.php';
 </script>";
@@ -136,7 +135,7 @@ window.location.href = 'http://localhost/jewellery/guest/resetforgot.php';
 </section>
 
 <?php
-include "footer1.php";
+include "footer.php";
 ?>
 <!-- Back to top -->
 <div class="btn-back-to-top bg0-hov" id="myBtn">
@@ -167,6 +166,7 @@ include "footer1.php";
 <script src="js/map-custom.js"></script>
 <!--===============================================================================================-->
 <script src="js/main.js"></script>
+
 
 </body>
 </html>

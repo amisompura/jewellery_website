@@ -8852,6 +8852,8 @@
     margin-right: auto;
 }
 
+
+
 /*[ TEXT ]
 ///////////////////////////////////////////////////////////
 */
@@ -8971,6 +8973,10 @@
     line-height: 2.9;
 }
 
+
+
+
+
 /*[ SHAPE ]
 ///////////////////////////////////////////////////////////
 */
@@ -8993,7 +8999,6 @@
 .dis-inline-block {
     display: inline-block;
 }
-
 .dis-flex {
     display: -webkit-box;
     display: -webkit-flex;
@@ -9027,6 +9032,7 @@
 .float-r {
     float: right;
 }
+
 
 /*[ Width & Height ]
 -----------------------------------------------------------
@@ -9095,6 +9101,7 @@
     right: auto;
 }
 
+
 /*[ Opacity ]
 -----------------------------------------------------------
 */
@@ -9153,6 +9160,8 @@
     background-color: black;
 }
 
+
+
 /*[ Wrap Picture ]
 -----------------------------------------------------------
 */
@@ -9178,10 +9187,11 @@
     border-radius: 50%;
     overflow: hidden;
 }
-
 .wrap-pic-cir img {
     width: 100%;
 }
+
+
 
 /*[ Hover ]
 -----------------------------------------------------------
@@ -9203,7 +9213,6 @@
     -moz-transition: all 0.6s;
     transition: all 0.6s;
 }
-
 .hov-img-zoom:hover img {
     -webkit-transform: scale(1.1);
     -moz-transform: scale(1.1);
@@ -9211,6 +9220,8 @@
     -o-transform: scale(1.1);
     transform: scale(1.1);
 }
+
+
 
 /*[  ]
 -----------------------------------------------------------
@@ -9235,6 +9246,8 @@
     cursor: pointer;
 }
 
+
+
 /*[ Transition ]
 -----------------------------------------------------------
 */
@@ -9244,49 +9257,42 @@
     -moz-transition: all 0.1s;
     transition: all 0.1s;
 }
-
 .trans-0-2 {
     -webkit-transition: all 0.2s;
     -o-transition: all 0.2s;
     -moz-transition: all 0.2s;
     transition: all 0.2s;
 }
-
 .trans-0-3 {
     -webkit-transition: all 0.3s;
     -o-transition: all 0.3s;
     -moz-transition: all 0.3s;
     transition: all 0.3s;
 }
-
 .trans-0-4 {
     -webkit-transition: all 0.4s;
     -o-transition: all 0.4s;
     -moz-transition: all 0.4s;
     transition: all 0.4s;
 }
-
 .trans-0-5 {
     -webkit-transition: all 0.5s;
     -o-transition: all 0.5s;
     -moz-transition: all 0.5s;
     transition: all 0.5s;
 }
-
 .trans-0-6 {
     -webkit-transition: all 0.6s;
     -o-transition: all 0.6s;
     -moz-transition: all 0.6s;
     transition: all 0.6s;
 }
-
 .trans-0-9 {
     -webkit-transition: all 0.9s;
     -o-transition: all 0.9s;
     -moz-transition: all 0.9s;
     transition: all 0.9s;
 }
-
 .trans-1-0 {
     -webkit-transition: all 1s;
     -o-transition: all 1s;
@@ -9744,6 +9750,7 @@
     align-items: stretch;
 }
 
+
 /*[ Absolute ]
 -----------------------------------------------------------
 */
@@ -9825,6 +9832,14 @@
     right: 0px;
     bottom: 0px;
 }
+
+
+
+
+
+
+
+
 
 /*=========================================================
 TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT
@@ -10241,6 +10256,7 @@ TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT
     text-transform: uppercase;
 }
 
+
 /*[ Color ]
 ///////////////////////////////////////////////////////////
 */
@@ -10260,12 +10276,15 @@ TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT
     color: #333333;
 }
 
+
 /*[  ]
 -----------------------------------------------------------
 */
 .color0-hov:hover {
     color: #e65540;
 }
+
+
 
 /*=========================================================
 SHAPE SHAPE SHAPE SHAPE SHAPE SHAPE SHAPE SHAPE SHAPE SHAPE
@@ -10529,6 +10548,7 @@ SHAPE SHAPE SHAPE SHAPE SHAPE SHAPE SHAPE SHAPE SHAPE SHAPE
     height: 22px;
 }
 
+
 /*[ Background ]
 ///////////////////////////////////////////////////////////
 */
@@ -10570,12 +10590,15 @@ SHAPE SHAPE SHAPE SHAPE SHAPE SHAPE SHAPE SHAPE SHAPE SHAPE
     background-size: cover;
 }
 
+
 /*[  ]
 -----------------------------------------------------------
 */
 .bg0-hov:hover {
     background-color: #e65540;
 }
+
+
 
 /*[  ]
 -----------------------------------------------------------
@@ -10584,6 +10607,7 @@ SHAPE SHAPE SHAPE SHAPE SHAPE SHAPE SHAPE SHAPE SHAPE SHAPE
     background-color: rgba(0, 0, 0, 0.35);
 }
 
+
 /*[  ]
 -----------------------------------------------------------
 */
@@ -10591,6 +10615,8 @@ SHAPE SHAPE SHAPE SHAPE SHAPE SHAPE SHAPE SHAPE SHAPE SHAPE
     background-image: url(../images/icons/pattern1.png);
     background-repeat: repeat;
 }
+
+
 
 /*[ Border ]
 ///////////////////////////////////////////////////////////
@@ -10729,6 +10755,10 @@ SHAPE SHAPE SHAPE SHAPE SHAPE SHAPE SHAPE SHAPE SHAPE SHAPE
     border-bottom-right-radius: 2px;
 }
 
+
+
+
+
 /*=========================================================
 EFFECT   EFFECT   EFFECT   EFFECT   EFFECT   EFFECT  EFFECT
 =========================================================*/
@@ -10740,7 +10770,6 @@ EFFECT   EFFECT   EFFECT   EFFECT   EFFECT   EFFECT  EFFECT
     position: relative;
     border-bottom: 1px solid #cccccc;
 }
-
 .effect1-line {
     display: block;
     position: absolute;
@@ -10767,10 +10796,11 @@ EFFECT   EFFECT   EFFECT   EFFECT   EFFECT   EFFECT  EFFECT
     color: white;
 }
 
+
+
 .eff3 {
     opacity: 0.7;
 }
-
 .eff3:hover {
     opacity: 1;
 }
@@ -10796,6 +10826,7 @@ EFFECT   EFFECT   EFFECT   EFFECT   EFFECT   EFFECT  EFFECT
     left: 0;
 }
 
+
 /*[ Box Shadow ]
 ///////////////////////////////////////////////////////////
 */
@@ -10807,6 +10838,7 @@ EFFECT   EFFECT   EFFECT   EFFECT   EFFECT   EFFECT  EFFECT
     -ms-box-shadow: 0 0 10px 0px rgba(0, 0, 0, 0.1);
 }
 
+
 /*[ Gradient ]
 ///////////////////////////////////////////////////////////
 */
@@ -10816,6 +10848,8 @@ EFFECT   EFFECT   EFFECT   EFFECT   EFFECT   EFFECT  EFFECT
     background: -moz-linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0));
     background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0));
 }
+
+
 
 /*[ Transform ]
 ///////////////////////////////////////////////////////////
@@ -10827,6 +10861,9 @@ EFFECT   EFFECT   EFFECT   EFFECT   EFFECT   EFFECT  EFFECT
     -o-transform: translate(-50%, -50%) rotateZ(90deg);
     transform: translate(-50%, -50%) rotateZ(90deg);
 }
+
+
+
 
 /*[ Hover ]
 ///////////////////////////////////////////////////////////
@@ -10853,7 +10890,6 @@ EFFECT   EFFECT   EFFECT   EFFECT   EFFECT   EFFECT  EFFECT
     line-height: 1.1;
     border-bottom: 1px solid transparent;
 }
-
 .hov5:hover {
     color: white;
     border-bottom: 1px solid white;
@@ -10871,6 +10907,8 @@ EFFECT   EFFECT   EFFECT   EFFECT   EFFECT   EFFECT  EFFECT
     color: #333333;
 }
 
+
+
 /*[ Parallax ]
 ///////////////////////////////////////////////////////////
 */
@@ -10885,6 +10923,11 @@ EFFECT   EFFECT   EFFECT   EFFECT   EFFECT   EFFECT  EFFECT
     background-color: rgba(0, 0, 0, 0.2);
 }
 
+
+
+
+
+
 /*=========================================================
 RESPONSIVE  RESPONSIVE  RESPONSIVE  RESPONSIVE   RESPONSIVE
 =========================================================*/
@@ -10895,6 +10938,7 @@ RESPONSIVE  RESPONSIVE  RESPONSIVE  RESPONSIVE   RESPONSIVE
         padding-left: 0px;
     }
 }
+
 
 /*[ XL ]
 ///////////////////////////////////////////////////////////
@@ -10927,6 +10971,7 @@ RESPONSIVE  RESPONSIVE  RESPONSIVE  RESPONSIVE   RESPONSIVE
     }
 }
 
+
 /*[ LG ]
 ///////////////////////////////////////////////////////////
 */
@@ -10949,6 +10994,7 @@ RESPONSIVE  RESPONSIVE  RESPONSIVE  RESPONSIVE   RESPONSIVE
     }
 }
 
+
 /*[ MD ]
 ///////////////////////////////////////////////////////////
 */
@@ -10958,6 +11004,7 @@ RESPONSIVE  RESPONSIVE  RESPONSIVE  RESPONSIVE   RESPONSIVE
     }
 
 }
+
 
 /*[ SM ]
 ///////////////////////////////////////////////////////////

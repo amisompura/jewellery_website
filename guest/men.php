@@ -1,6 +1,4 @@
-<?php
-session_start();
-?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -40,22 +38,18 @@ session_start();
     <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <!--===============================================================================================-->
-
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body class="animsition">
 
 <?php
+
 include "header.php";
 
 ?>
 <!-- Title Page -->
 <section class="bg-title-page p-t-50 p-b-40 flex-col-c-m" style="background-image: url(images/menbanner1.jpg);">
-    <!-- <h2 class="l-text2 t-center">
-        Men
-    </h2> -->
-    <!-- <p class="m-text13 t-center">
-        New Arrivals Men Collection 2018
-    </p> -->
+
 </section>
 
 
@@ -65,9 +59,8 @@ include "header.php";
         <div class="row">
             <div class="col-sm-6 col-md-4 col-lg-3 p-b-50">
                 <div class="leftbar p-r-20 p-r-0-sm">
-                    <!--  -->
-                    Categories
-                    <h4 class="m-text14 p-b-7">
+                    <h4 class="m-text23 p-t-56 p-b-34">
+                        Categories
                     </h4>
 
                     <ul class="p-b-54">
@@ -78,34 +71,32 @@ include "header.php";
                         </li>
 
                         <li class="p-t-4">
-                            <button class="s-text13" onclick="loadmenring();">
+                            <button class="s-text13" onclick="loadmenring();" title="Rings">
                                 Rings
                             </button>
                         </li>
 
                         <li class="p-t-4">
-                            <button class="s-text13" onclick="loadmenbracelate();">
+                            <button class="s-text13" onclick="loadmenbracelate();" title="Braclete">
                                 Braclete
                             </button>
                         </li>
 
                         <li class="p-t-4">
-                            <button class="s-text13" onclick="loadmenchain();">
+                            <button class="s-text13" onclick="loadmenchain();" title="Chain">
                                 Chain
                             </button>
                         </li>
 
                         <li class="p-t-4">
-                            <button class="s-text13" onclick="loadmenpendal();">
+                            <button class="s-text13" onclick="loadmenpendal();" title="Pendals">
                                 Pendals
                             </button>
                         </li>
 
-
                     </ul>
 
-                    <!--  -->
-                    <h4 class="m-text14 p-b-32">
+                    <h4 class="m-text23 p-t-56 p-b-34">
                         Filters
                     </h4>
 
@@ -117,74 +108,43 @@ include "header.php";
                         <div class="wra-filter-bar">
                             <input type="range" min="0" max="4000" value="10000"
                                    id="min_price" name="min_price" class="slider"/>
-                            <!-- <div id="filter-bar"></div> -->
+
                         </div>
 
                         <div class="flex-sb-m flex-w p-t-16">
                             <div class="w-size11">
-                                <!-- Button -->
-                                <!-- <button class="flex-c-m size4 bg7 bo-rad-15 hov1 s-text14 trans-0-4">
-                                    Filter
-                                </button> -->
                             </div>
 
-                            <div class="s-text3 p-t-10 p-b-10" id="price_range">
-                                <!-- 	Range: $<span id="value-lower">610</span> - $<span id="value-upper">980</span> -->
+                            <div class="s-text3 p-t-10 p-b-10" id="price_range"
+                                 style="font-size: 17px;font-family: 'FranchiseRegular', 'Arial Narrow', Arial, sans-serif;color:#0b2e13 ">
                             </div>
                         </div>
                     </div>
                     <div class="filter-color p-t-22 p-b-50 bo3">
-                        <div class="m-text15 p-b-17">
+
+                        <h4 class="m-text23 p-t-56 p-b-34">
                             Default Sorting
-                        </div>
-
-
-                        <!--                             <input type="checkbox"  id="checkbox1" class="s-text13" onchange="showPopularity(this.value)" />&nbsp;&nbsp;Popularity <br>-->
-                        <input type="checkbox" id="checkbox2" class="s-text13" onchange="showlowtohigh(this.value)"/>&nbsp;&nbsp;Price:
+                        </h4>
+                        <input type="checkbox" id="checkbox2" class="s-text13" onchange="showlowtohigh(this.value)"
+                               style="font-size: 17px;font-family: 'FranchiseRegular', 'Arial Narrow', Arial, sans-serif;color:#0b2e13 "/>&nbsp;&nbsp;Price:
                         low to high <br>
-                        <input type="checkbox" id="checkbox1" class="s-text13" onchange="showhightolow(this.value)"/>&nbsp;&nbsp;Price:
+                        <input type="checkbox" id="checkbox1" class="s-text13" onchange="showhightolow(this.value)"
+                               style="font-size: 17px;font-family: 'FranchiseRegular', 'Arial Narrow', Arial, sans-serif;color:#0b2e13 "/>&nbsp;&nbsp;Price:
                         high to low <br>
 
                     </div>
-                    <!--  <div class="m-text14 p-b-32">
-                          Search Product
-                      </div>
 
-                     <div class="search-product pos-relative bo4 of-hidden">
-                         <input class="s-text7 size6 p-l-23 p-r-50" type="text" name="search-product" id="search-product" placeholder="Search Products...">
-
-                         <button class="flex-c-m size5 ab-r-m color2 color0-hov trans-0-4">
-                             <i class="fs-12 fa fa-search" aria-hidden="true"></i>
-                         </button>
-                     </div> -->
                 </div>
             </div>
 
             <div class="col-sm-6 col-md-8 col-lg-9 p-b-50">
-                <!--  -->
+
                 <div class="flex-sb-m flex-w p-b-35">
                     <div class="flex-w">
-                        <div class="rs2-select2 bo4 of-hidden  ">
-                            <!-- <select class="selection-2" name="sorting">
-                                <option>Default Sorting</option>
-                                <option>Popularity</option>
-                                <option>Price: low to high</option>
-                                <option>Price: high to low</option>
-                            </select> -->
+                        <div class="rs2-select2 bo4 of-hidden ">
                         </div>
 
                         <div class="rs2-select2 bo4 of-hidden ">
-
-                            <!-- 	<select class="selection-2" name="sorting" onchange="showPrice(this.value)" id="sorting">
-                                <option value="">Price</option>
-                                <option value="1" >₹0.00 - ₹1000.00</a></option>
-                                <option value="2">₹1000.00 - ₹2000.00</option>
-                                <option value="3">₹2000.00 - ₹3000.00</option>
-                                <option value="4">₹3000.00 - ₹4000.00</option>
-                                <option value="5">₹4000.00+</option>
-
-                            </select>
-                         -->
                         </div>
                     </div>
                     <div class="search-product pos-relative bo4 of-hidden">
@@ -195,9 +155,6 @@ include "header.php";
                             <i class="fs-12 fa fa-search" aria-hidden="true"></i>
                         </button>
                     </div>
-                    <!-- <span class="s-text8 p-t-5 p-b-5">
-                        Showing 1–12 of 16 results
-                    </span> -->
                 </div>
 
                 <!-- Product -->
@@ -214,21 +171,17 @@ include "header.php";
                     <?php
                     $query = "select * from product WHERE cat_id = '1'";
                     $rs1 = mysqli_query($c, $query);
-
                     ?>
 
 
                     <?php
                     while ($row1 = mysqli_fetch_array($rs1)) {
-
-
                         ?>
 
                         <input type="hidden" name="cat_id" id="cat_id" value="<?php echo $row1['cat_id']; ?>">
-
                         <div class="col-sm-12 col-md-6 col-lg-4 p-b-50">
 
-                            <!-- Block2 -->
+
                             <article>
                                 <div class="block2">
                                     <form method="POST" action="men.php?action=add&p_id=<?php echo $row1[0]; ?>">
@@ -249,13 +202,14 @@ include "header.php";
                                                 </button>
 
                                                 <div class="block2-btn-addcart w-size1 trans-0-4">
-                                                    <!-- Button -->
+
                                                     <label style="color:white">Quntity:&nbsp;&nbsp;</label><input
                                                             type="number" name="quntity" value="1"
-                                                            style="width: 150px;height: 40px;margin-top: 10px;border-radius: 25px;text-align: center;background-color: lightgray">
+                                                            style="width: 150px;height: 40px;margin-top: 10px;border-radius: 25px;text-align: center;background-color: lightgray"
+                                                            size="10">
                                                     <br><br>
-                                                    <input type="hidden" name="hidden_uid"
-                                                           value="<?php echo $row1['user_id']; ?>">
+                                                    <!--		<input type = "hidden" name = "hidden_uid" value = "-->
+                                                    <?php //echo $row1['user_id'];?><!--">-->
                                                     <input type="hidden" name="hidden_image"
                                                            value="<?php echo $row1['image']; ?>">
                                                     <input type="hidden" name="hidden_name"
@@ -264,18 +218,10 @@ include "header.php";
                                                            value="<?php echo $row1['price']; ?>">
                                                     <input type="hidden" name="hidden_total"
                                                            value="<?php echo $row1['total_amt']; ?>">
-                                                    <input type="hidden" name="hidden_charge"
-                                                           value="<?php echo $row1['hipings_charge']; ?>">
 
 
-                                                    <!-- Button -->
-                                                    <input type="submit" name="add_to_cart"
-                                                           class="flex-c-m size1 bg4 bo-rad-23 hov1 s-text1 trans-0-4"
-                                                           id="addtocart" value="AddToCart"/>
-                                                    <!-- <input type = "submit"
-                                                    value = "AddToCart"  class="flex-c-m size1 bg4 bo-rad-23 hov1 s-text1 trans-0-4" data-toggle="modal" data-target="#myModal"> -->
-
-
+                                                    <input class="flex-c-m size1 bg4 bo-rad-23 hov1 s-text1 trans-0-4"
+                                                           type="submit" name="add_to_cart" value="Add To Cart">
                                                 </div>
                                             </div>
                                         </div>
@@ -286,10 +232,9 @@ include "header.php";
                                                    class="block2-name dis-block s-text3 p-b-5">
                                                     <?php echo $row1['p_name']; ?></a>
 
-
                                                 <br>
                                                 <span class="block2-price m-text6 p-r-5">
-										₹<?php echo $row1['price']; ?>
+										Rs&nbsp;<?php echo $row1['price']; ?>
 									</span>
                                             </div>
 
@@ -302,17 +247,8 @@ include "header.php";
                         <?php
                     }
                     ?>
-
-
                 </div>
-                </article>
 
-
-                <!-- Pagination -->
-                <!-- <div class="pagination flex-m flex-w p-t-26">
-                    <a href="#" class="item-pagination flex-c-m trans-0-4 active-pagination">1</a>
-                    <a href="#" class="item-pagination flex-c-m trans-0-4">2</a>
-                </div> -->
             </div>
         </div>
     </div>
@@ -321,10 +257,7 @@ include "header.php";
 <?php
 include "footer.php";
 ?>
-<!-- Footer -->
 
-
-<!-- Back to top -->
 <div class="btn-back-to-top bg0-hov" id="myBtn">
 		<span class="symbol-btn-back-to-top">
 			<i class="fa fa-angle-double-up" aria-hidden="true"></i>
@@ -335,7 +268,6 @@ include "footer.php";
 <div id="dropDownSelect1"></div>
 <div id="dropDownSelect2"></div>
 
-
 <!--===============================================================================================-->
 <script type="text/javascript" src="vendor/jquery/jquery-3.2.1.min.js"></script>
 <!--===============================================================================================-->
@@ -345,17 +277,17 @@ include "footer.php";
 <script type="text/javascript" src="vendor/bootstrap/js/bootstrap.min.js"></script>
 <!--===============================================================================================-->
 <script type="text/javascript" src="vendor/select2/select2.min.js"></script>
-<!--	<!-- <script type="text/javascript">-->
-<!--		$(".selection-1").select2({-->
-<!--			minimumResultsForSearch: 20,-->
-<!--			dropdownParent: $('#dropDownSelect1')-->
-<!--		});-->
-<!---->
-<!--		$(".selection-2").select2({-->
-<!--			minimumResultsForSearch: 20,-->
-<!--			dropdownParent: $('#dropDownSelect2')-->
-<!--		});-->
-<!--	</script> -->-->
+<!-- <script type="text/javascript">
+    $(".selection-1").select2({
+        minimumResultsForSearch: 20,
+        dropdownParent: $('#dropDownSelect1')
+    });
+
+    $(".selection-2").select2({
+        minimumResultsForSearch: 20,
+        dropdownParent: $('#dropDownSelect2')
+    });
+</script> -->
 <!--===============================================================================================-->
 <script type="text/javascript" src="vendor/daterangepicker/moment.min.js"></script>
 <script type="text/javascript" src="vendor/daterangepicker/daterangepicker.js"></script>
@@ -365,21 +297,20 @@ include "footer.php";
 <!--===============================================================================================-->
 <script type="text/javascript" src="vendor/sweetalert/sweetalert.min.js"></script>
 <script type="text/javascript">
-    $('.block2-btn-addcart').each(function () {
-        var nameProduct = $(this).parent().parent().parent().find('.block2-name').html();
-        $("[action]").on('click', function () {
-            swal(nameProduct, "is added to cart !", "success");
+    // $('.block2-btn-addcart').each(function(){
+    // 	var nameProduct = $(this).parent().parent().parent().find('.block2-name').html();
+    // 	$("[action]").on('click', function(){
+    // 		swal(nameProduct, "is added to cart !", "success");
+    // 	});
+    // });
+    window.onload = function{
+        $('.block2-btn-addwishlist').each(function () {
+            var nameProduct = $(this).parent().parent().parent().find('.block2-name').html();
+            $("[action]").on('click', function () {
+                //swal(nameProduct, "is added to cart !", "success");
+            });
         });
-    });
-
-    $('.block2-btn-addwishlist').each(function () {
-        var nameProduct = $(this).parent().parent().parent().find('.block2-name').html();
-        $(this).on('click', function () {
-
-            swal(nameProduct, "is added to wishlist !", "success");
         }
-
-    });
 </script>
 
 <!--===============================================================================================-->
@@ -414,7 +345,6 @@ include "footer.php";
 <script src="js/price.js"></script>
 <script src="js/search.js"></script>
 <script src="js/main1.js"></script>
-<script src="js/pagination.js"></script>
 
 
 </body>
